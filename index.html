@@ -811,16 +811,46 @@ r.classList.add('go');})();</script>
   <div class="wrap hero3-in">
     <p class="kicker">Падел77 <span>/</span> Москва · Владыкино</p>
     <h1 id="h1" aria-label="Ваша новая любимая игра">Ваша новая<br><em>любимая игра.</em></h1>
-    <p class="lede-h">Оставьте город за стеклом корта.<br> Поймайте азарт первого розыгрыша —<br> остальное мы берём на себя.</p>
+    <p class="lede-h">Оставьте город за стеклом корта.<br>Поймайте азарт первого розыгрыша —<br>остальное мы берём на себя.<br><br>Первая групповая тренировка — <b>1 500 ₽</b>.<br>Ракетки выдаём, группу подберёт тренер.</p>
     <div class="cta-row">
       <button class="btn btn-lime btn-xl" type="button" data-book data-what="adult">Записаться на тренировку
         <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 14L14 6M7 6h7v7"/></svg></button>
       <a class="hero-secondary" href="#courts">Открыть для себя падел <svg width="13" height="13" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 15L15 5M5 5h10v10"/></svg></a>
     </div>
     <p class="ask" aria-hidden="true"><b>›</b><span id="ask"></span><i class="caret"></i></p>
-    <dl class="hstats"><div><dt>С первого мяча</dt><dd>подходит новичкам</dd></div><div><dt>В вашем ритме</dt><dd>вдвоём или компанией</dd></div><div><dt>Всё готово</dt><dd>ракетки выдаём</dd></div></dl>
+      <dl class="hstats">
+   <div><dt>1 500 ₽</dt><dd>первое занятие</dd></div>
+   <div><dt>До 4</dt><dd>игроков в группе</dd></div>
+   <div><dt>Ракетки</dt><dd>выдаём на занятии</dd></div>
+   <div><dt>Владыкино</dt><dd>рядом с метро</dd></div>
+  </dl>
 
   </div>
+</section>
+
+<section class="wrap sec" id="book" aria-labelledby="h-book">
+  <p class="eyebrow" data-r>Онлайн-запись <span class="demo">демо записи</span></p>
+  <h2 id="h-book" data-r>Ваша следующая игра.<br><em>Выберите время.</em></h2>
+  <div class="bk glass" id="bk" data-r>
+    <div class="bk-top">
+      <div class="seg bk-who" role="group" aria-label="Для кого" id="bkWho"><button type="button" data-v="adult" aria-pressed="true">Взрослый</button><button type="button" data-v="kid" aria-pressed="false">Ребёнок</button></div>
+      <div class="seg bk-mode" role="group" aria-label="Что записываем" id="bkMode">
+        <button type="button" data-v="group" aria-pressed="true">Группа</button><button type="button" data-v="ind" aria-pressed="false">Индивидуально</button><button type="button" data-v="rent" aria-pressed="false" id="bkRentB">Аренда корта</button>
+      </div>
+    </div>
+    <div class="bk-days" id="bkDays" role="group" aria-label="Дата"></div>
+    <div class="bk-opt" id="bkOpt"></div>
+    <div class="bk-body" id="bkBody" aria-live="polite"></div>
+    <div class="bk-legend"><span><i class="f"></i>Свободно</span><span><i class="b"></i>Занято</span><span><i class="s"></i>Выбрано</span></div>
+    <form class="bk-sum" id="bkForm" hidden>
+      <div class="bk-pick"><small>Вы выбрали</small><b id="bkPick"></b><span id="bkPrice"></span></div>
+      <div class="bk-fields"><input id="bkName" aria-label="Имя" type="text" placeholder="Имя" autocomplete="name" required><input id="bkTel" aria-label="Телефон" type="tel" placeholder="Телефон" autocomplete="tel" required><button class="btn btn-lime" type="submit">Записаться</button></div>
+    </form>
+    <p class="bk-ok" id="bkOk" hidden></p>
+    <div class="bk-call"><span>Удобнее по телефону? Позвоните, администратор запишет вас сам.</span><a class="btn btn-lime bk-tel" href="tel:+79254977391" aria-label="Позвонить +7 925 497 73 91"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg>Позвонить <b>+7 925 497 73 91</b></a></div>
+  </div>
+  <div class="tm" id="tm" hidden><div class="tm-bg" data-tmx></div><div class="tm-p" role="dialog" aria-modal="true" aria-labelledby="tmN"><button class="tm-x" type="button" data-tmx aria-label="Закрыть">×</button><div class="tm-av" id="tmI"></div><span class="tm-role">Тренер</span><h3 id="tmN"></h3><p id="tmB"></p><ul class="tm-l"><li>Групповые тренировки: до 4 человек, уровень подбирает тренер</li><li>Индивидуальное занятие: 3 850 ₽ плюс аренда корта</li></ul><div class="tm-a"><button class="btn btn-lime" type="button" id="tmGo">Выбрать время</button><button class="btn btn-line" type="button" data-tmx>Закрыть</button></div></div></div>
+  <p class="fine2">Так будет выглядеть запись на сайте: слоты берутся из таблицы клуба. Сейчас показаны выдуманные данные.</p>
 </section>
 
 <div class="wrap bookwrap">
@@ -925,30 +955,7 @@ r.classList.add('go');})();</script>
 </section>
 
 
-<section class="wrap sec" id="book" aria-labelledby="h-book">
-  <p class="eyebrow" data-r>Онлайн-запись <span class="demo">демо записи</span></p>
-  <h2 id="h-book" data-r>Ваша следующая игра.<br><em>Выберите время.</em></h2>
-  <div class="bk glass" id="bk" data-r>
-    <div class="bk-top">
-      <div class="seg bk-who" role="group" aria-label="Для кого" id="bkWho"><button type="button" data-v="adult" aria-pressed="true">Взрослый</button><button type="button" data-v="kid" aria-pressed="false">Ребёнок</button></div>
-      <div class="seg bk-mode" role="group" aria-label="Что записываем" id="bkMode">
-        <button type="button" data-v="group" aria-pressed="true">Группа</button><button type="button" data-v="ind" aria-pressed="false">Индивидуально</button><button type="button" data-v="rent" aria-pressed="false" id="bkRentB">Аренда корта</button>
-      </div>
-    </div>
-    <div class="bk-days" id="bkDays" role="group" aria-label="Дата"></div>
-    <div class="bk-opt" id="bkOpt"></div>
-    <div class="bk-body" id="bkBody" aria-live="polite"></div>
-    <div class="bk-legend"><span><i class="f"></i>Свободно</span><span><i class="b"></i>Занято</span><span><i class="s"></i>Выбрано</span></div>
-    <form class="bk-sum" id="bkForm" hidden>
-      <div class="bk-pick"><small>Вы выбрали</small><b id="bkPick"></b><span id="bkPrice"></span></div>
-      <div class="bk-fields"><input id="bkName" aria-label="Имя" type="text" placeholder="Имя" autocomplete="name" required><input id="bkTel" aria-label="Телефон" type="tel" placeholder="Телефон" autocomplete="tel" required><button class="btn btn-lime" type="submit">Записаться</button></div>
-    </form>
-    <p class="bk-ok" id="bkOk" hidden></p>
-    <div class="bk-call"><span>Удобнее по телефону? Позвоните, администратор запишет вас сам.</span><a class="btn btn-lime bk-tel" href="tel:+79254977391" aria-label="Позвонить +7 925 497 73 91"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg>Позвонить <b>+7 925 497 73 91</b></a></div>
-  </div>
-  <div class="tm" id="tm" hidden><div class="tm-bg" data-tmx></div><div class="tm-p" role="dialog" aria-modal="true" aria-labelledby="tmN"><button class="tm-x" type="button" data-tmx aria-label="Закрыть">×</button><div class="tm-av" id="tmI"></div><span class="tm-role">Тренер</span><h3 id="tmN"></h3><p id="tmB"></p><ul class="tm-l"><li>Групповые тренировки: до 4 человек, уровень подбирает тренер</li><li>Индивидуальное занятие: 3 850 ₽ плюс аренда корта</li></ul><div class="tm-a"><button class="btn btn-lime" type="button" id="tmGo">Выбрать время</button><button class="btn btn-line" type="button" data-tmx>Закрыть</button></div></div></div>
-  <p class="fine2">Так будет выглядеть запись на сайте: слоты берутся из таблицы клуба. Сейчас показаны выдуманные данные.</p>
-</section>
+
 
 <section class="wrap sec" id="play" aria-labelledby="h-play">
   <p class="eyebrow" data-r>Площадка</p>
