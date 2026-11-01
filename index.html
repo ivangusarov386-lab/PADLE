@@ -98,9 +98,23 @@ html.scrolled .top{background:rgba(8,9,12,.78);-webkit-backdrop-filter:blur(16px
 .hero-points li:not(.hero-intro)::before{content:"";flex:none;width:7px;height:7px;margin-right:1px;border-radius:50%;background:var(--lime);box-shadow:0 0 14px rgba(201,169,110,.45)}
 .hero-points b{flex:none;color:var(--ink);font-weight:800}
 .hero-points .hero-intro{margin-bottom:3px;color:var(--ink);font-size:1.06em;font-weight:600}
-@media(max-width:560px){.hero-points li:not(.hero-intro){display:grid;grid-template-columns:8px 1fr;column-gap:10px;row-gap:2px}.hero-points li:not(.hero-intro)::before{grid-row:1/3}.hero-points b{white-space:normal}.nav{right:16px}}
+@media(max-width:560px){
+  .hero3{min-height:100svh;align-items:flex-start;padding:clamp(126px,17vh,158px) 0 76px}
+  .hero3-in{max-width:100%}
+  .hero3 h1{margin-top:14px;font-size:clamp(2.45rem,12vw,3.45rem)}
+  .hero-points{gap:11px;margin-top:20px;font-size:1rem}
+  .hero-points .hero-intro{margin-bottom:4px;font-size:1.02em;line-height:1.42}
+  .hero-points li:not(.hero-intro){display:grid;grid-template-columns:8px 1fr;column-gap:10px;row-gap:2px}
+  .hero-points li:not(.hero-intro)::before{grid-row:1/3}
+  .hero-points b{white-space:normal}
+  .hero3 .cta-row{margin-top:22px;gap:12px}
+  .hero3 .cta-row .btn{width:100%;min-height:54px;padding-inline:16px}
+  .hero3 .hero-secondary{margin-top:2px}
+  .hero3 .ask{margin-top:14px}
+  .nav{right:16px}
+}
 
-@media (max-width:1020px){.nav{display:none}}
+@media (max-width:1020px){.nav{display:none}.nav:not([hidden]){display:grid}}
 @media (max-width:560px){.fxbtn span{display:none}.fxbtn{padding:0 12px}.logo small{display:none}.promo{font-size:.68rem}}
 
 /* кнопки */
@@ -841,11 +855,7 @@ r.classList.add('go');})();</script>
       <a class="hero-secondary" href="#courts">Открыть для себя падел <svg width="13" height="13" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 15L15 5M5 5h10v10"/></svg></a>
     </div>
     <p class="ask" aria-hidden="true"><b>›</b><span id="ask"></span><i class="caret"></i></p>
-      <dl class="hstats">
-   <div><dt>С первого мяча</dt><dd>подходит новичкам</dd></div>
-   <div><dt>В вашем ритме</dt><dd>вдвоём или компанией</dd></div>
-   <div><dt>Владыкино</dt><dd>рядом с метро</dd></div>
-  </dl>
+
 
   </div>
 </section>
@@ -1813,12 +1823,6 @@ r.classList.add('go');})();</script>
   $('tmGo').addEventListener('click',function(){tmClose();mode='ind';opt=tmI;sel=null;draw();toBook()});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!tmEl.hidden)tmClose();if((e.key==='Enter'||e.key===' ')&&e.target.matches&&e.target.matches('.coach[data-tr]')){e.preventDefault();trainer(+e.target.getAttribute('data-tr'))}});
   document.addEventListener('click',function(e){var c=e.target.closest('.coach[data-tr]');if(c){trainer(+c.getAttribute('data-tr'))}});
-  var menuToggle=$('#menuToggle'),menu=$('#nav');
-  function closeMenu(){menu.hidden=true;menuToggle.setAttribute('aria-expanded','false');menuToggle.setAttribute('aria-label','Открыть меню')}
-  menuToggle.addEventListener('click',function(){var opening=menu.hidden;menu.hidden=!opening;menuToggle.setAttribute('aria-expanded',opening?'true':'false');menuToggle.setAttribute('aria-label',opening?'Закрыть меню':'Открыть меню')});
-  $$('#nav a').forEach(function(a){a.addEventListener('click',closeMenu)});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!menu.hidden){closeMenu();menuToggle.focus()}});
-  document.addEventListener('click',function(e){if(!menu.hidden&&!menu.contains(e.target)&&!menuToggle.contains(e.target))closeMenu()});
   // все кнопки записи ведут к форме
   document.addEventListener('click',function(e){var el=e.target.closest('[data-book]');if(!el)return;e.preventDefault();e.stopImmediatePropagation();
     var w=el.getAttribute('data-what')||(el.closest('#prices')?'rent':'group');
@@ -1828,5 +1832,17 @@ r.classList.add('go');})();</script>
 })();
 </script>
 
+<script>
+(function(){
+  var button=document.getElementById('menuToggle');
+  var menu=document.getElementById('nav');
+  if(!button||!menu)return;
+  function close(){menu.hidden=true;button.setAttribute('aria-expanded','false');button.setAttribute('aria-label','Открыть меню')}
+  button.addEventListener('click',function(){var open=menu.hidden;menu.hidden=!open;button.setAttribute('aria-expanded',open?'true':'false');button.setAttribute('aria-label',open?'Закрыть меню':'Открыть меню')});
+  menu.querySelectorAll('a').forEach(function(link){link.addEventListener('click',close)});
+  document.addEventListener('keydown',function(event){if(event.key==='Escape'&&!menu.hidden){close();button.focus()}});
+  document.addEventListener('click',function(event){if(!menu.hidden&&!menu.contains(event.target)&&!button.contains(event.target))close()});
+})();
+</script>
 </body>
 </html>
