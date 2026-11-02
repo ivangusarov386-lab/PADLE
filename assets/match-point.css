@@ -78,3 +78,5 @@
 .hero-location .hero-location-address{padding-left:14px;font-size:10px;font-weight:400;letter-spacing:.03em}
 @media(max-width:760px){.hero-location>span{font-size:10px;letter-spacing:.03em}.hero-location .hero-location-address{font-size:10px;letter-spacing:.02em}}
 @media(max-width:360px){.hero-location>span{font-size:9px}.hero-location .hero-location-address{font-size:9px}}
+.club .club-nearby{max-width:410px;margin-top:14px;color:#59575e;font-size:13px;line-height:1.6}
+@media(max-width:760px){.club .club-nearby{max-width:320px;font-size:12px}}
