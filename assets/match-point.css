@@ -81,3 +81,7 @@
 .club .club-nearby{max-width:410px;margin-top:14px;color:#59575e;font-size:13px;line-height:1.6}
 @media(max-width:760px){.club .club-nearby{max-width:320px;font-size:12px}}
 .hero-location a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important;font:inherit!important}
+/* A clear, consistent booking button on iOS and other browsers. */
+.intro .text-link{-webkit-appearance:none;appearance:none;display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:14px 24px;border:0;border-radius:0;background:#ff704e;color:#171018;font-family:inherit;font-size:11px;font-weight:700;line-height:1.3;text-align:center;text-decoration:none}
+.intro .text-link:hover{background:#ff8a6c;color:#171018}
+@media(max-width:760px){.intro .text-link{width:100%;max-width:340px}}
