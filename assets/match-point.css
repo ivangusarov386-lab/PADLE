@@ -28,3 +28,14 @@
 .format-open::before{content:'';position:fixed;inset:0;z-index:999;background:#101019d9}
 .format-dialog[open]{z-index:1000}
 @media(max-width:760px){.format-aside{display:none}.format-layout{display:block}.format-buttons button{min-height:64px;gap:18px;font-size:clamp(14px,4vw,18px);letter-spacing:0}.format-buttons button span{width:22px}.formats-head p{line-height:1.55;max-width:290px}.format-dialog h2{letter-spacing:-.035em;line-height:1.1}.format-dialog li{letter-spacing:0;line-height:1.5}}
+/* Fixed navigation and readable location, including on narrow phones. */
+.top{position:fixed;top:0;left:0;right:0;z-index:30;background:rgba(16,16,25,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.top .top-menu{display:flex;align-items:center;gap:8px;margin:0 0 0 auto}
+.top-menu a,.top-menu button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border:1px solid #ffffff70;border-radius:100px;background:transparent;color:#fff;font-size:11px;font-weight:700;text-align:center;white-space:nowrap}
+.top-menu button{background:#ff704e;border-color:#ff704e;color:#171018}
+.top-menu a:hover,.top-menu a:focus-visible{background:#ffffff20}.top-menu button:hover{background:#ff947b}
+#play,#prices,#book{scroll-margin-top:96px}.booking{scroll-margin-top:96px}
+.hero-location{display:grid;gap:10px}.hero-location .metro{padding-left:13px;letter-spacing:.06em;font-size:12px;text-transform:none}.hero-address{text-align:right;max-width:170px;line-height:1.5;letter-spacing:.08em}
+@media(max-width:760px){.top{height:68px;padding:0 16px}.top .brand{font-size:15px;gap:5px;letter-spacing:-.04em}.top .brand-ball svg{width:23px;height:23px}.top .brand small{font-size:6px;letter-spacing:.1em}.top .top-menu{display:flex;gap:4px}.top-menu a,.top-menu button{min-height:42px;padding:9px 10px;font-size:10px}.top-menu a:nth-child(2){padding-inline:8px}.hero-meta{gap:12px}.hero-location .metro{font-size:10px;gap:0}.hero-address{max-width:130px;font-size:8px}#play,#prices,#book{scroll-margin-top:80px}.booking{scroll-margin-top:80px}}
+@media(max-width:360px){.top{padding-inline:10px}.top .brand{font-size:13px;gap:3px}.top .brand-ball svg{width:20px;height:20px}.top .brand small{font-size:5px}.top-menu a,.top-menu button{font-size:9px;padding-inline:7px}.top-menu a:nth-child(2){padding-inline:6px}}
+.hero-address{align-self:end}
