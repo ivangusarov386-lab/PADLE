@@ -66,3 +66,10 @@
 .coach-label{margin:0;font-size:10px}.coach-info h3{margin:13px 0 22px}.coach-info ul{margin-top:auto}.coach-info li{padding-block:11px}.coach-info li:before{top:18px}
 @media(max-width:760px){.coach-card{min-height:0;padding:0}.coach-photo{aspect-ratio:1.18}.coach-info{padding:22px 24px 26px}.coach-info h3{font-size:32px;margin:12px 0 20px}.coach-number{top:12px;left:12px;width:32px;height:32px}.coach-photo-caption{font-size:8px}}
 @media(prefers-reduced-motion:reduce){.coach-photo img{transition:none}}
+/* Coach silhouette rises in front of the circular graphic. */
+.coach-photo{isolation:isolate;background:transparent;aspect-ratio:1.08;overflow:hidden}
+.coach-photo:before{content:'';position:absolute;z-index:-1;left:50%;bottom:0;width:72%;aspect-ratio:1;border-radius:50%;transform:translateX(-50%);background:#c7d3e1}
+.coach-card:nth-child(2) .coach-photo:before{background:#e6c8bd}
+.coach-photo img,.coach-card:nth-child(2) .coach-photo img{position:relative;width:100%;height:100%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 10px 12px #17172018)}
+.coach-photo:after{display:none}.coach-photo-caption{color:#57565c;text-shadow:none;bottom:14px}
+@media(max-width:760px){.coach-photo{aspect-ratio:1}.coach-photo:before{width:74%}}
