@@ -73,3 +73,8 @@
 .coach-photo img,.coach-card:nth-child(2) .coach-photo img{position:relative;width:100%;height:100%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 10px 12px #17172018)}
 .coach-photo:after{display:none}.coach-photo-caption{color:#57565c;text-shadow:none;bottom:14px}
 @media(max-width:760px){.coach-photo{aspect-ratio:1}.coach-photo:before{width:74%}}
+/* Club location on the opening screen. */
+.hero-location>span{letter-spacing:.06em;text-transform:none}
+.hero-location .hero-location-address{padding-left:14px;font-size:10px;font-weight:400;letter-spacing:.03em}
+@media(max-width:760px){.hero-location>span{font-size:10px;letter-spacing:.03em}.hero-location .hero-location-address{font-size:10px;letter-spacing:.02em}}
+@media(max-width:360px){.hero-location>span{font-size:9px}.hero-location .hero-location-address{font-size:9px}}
