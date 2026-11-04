@@ -1,7 +1,7 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html lang="ru"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Падел77 Администратор</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700;800&display=swap">
+
 <style>
 /* Layout: рабочий экран администратора. Шапка со счётчиком, три вкладки, список заявок крупными карточками. */
 :root{
@@ -177,10 +177,11 @@ table.g td.g{background:var(--blue-bg);color:var(--blue)}
 @media (max-width:640px){.gc{grid-template-columns:58px minmax(0,1fr)}.gc .pl{grid-column:1/-1;flex-direction:row;justify-content:space-between;align-items:center}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
+<link rel="stylesheet" href="assets/admin.css?v=20261104-1">
 
 <div id="login">
   <form class="lg" id="lgForm">
-    <div class="logo">Падел<em>77</em></div>
+    <div class="login-mark" aria-hidden="true"><svg width="27" height="27" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 2v26M2 15h26M6 6l18 18M24 6L6 24"/></svg></div><div class="logo">ПАДЕЛ<em>77</em></div><div class="login-eyebrow">РАБОЧЕЕ ПРОСТРАНСТВО</div>
     <p>Панель администратора. Введите код входа.</p>
     <label for="code" hidden>Код входа</label>
     <input id="code" type="password" inputmode="numeric" maxlength="4" autocomplete="off" placeholder="••••" aria-describedby="lgErr">
@@ -195,7 +196,7 @@ table.g td.g{background:var(--blue-bg);color:var(--blue)}
   <div class="wrap">
     <header class="top">
       <div class="hrow">
-        <div class="brand">Падел<em>77</em><small>Администратор</small></div>
+        <div class="brand"><span class="brand-icon" aria-hidden="true"><svg width="27" height="27" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 2v26M2 15h26M6 6l18 18M24 6L6 24"/></svg></span><span>ПАДЕЛ<em>77</em><small>АДМИНИСТРАТОР</small></span></div>
         <span class="clock" id="clock"></span>
         <div class="th" role="group" aria-label="Тема оформления"><button type="button" data-th="dark" aria-pressed="true">Тёмная</button><button type="button" data-th="light" aria-pressed="false">Светлая</button></div>
         <button class="btn btn-line btn-sm" id="snd" type="button" aria-pressed="true">Звук включён</button>
@@ -231,8 +232,8 @@ table.g td.g{background:var(--blue-bg);color:var(--blue)}
   var LV=['Новички','Новички','Средний уровень'];
   // тема оформления
   function setTheme(t,save){document.documentElement.setAttribute('data-theme',t);[].forEach.call(document.querySelectorAll('[data-th]'),function(b){b.setAttribute('aria-pressed',b.getAttribute('data-th')===t?'true':'false')});if(save){try{localStorage.setItem('padel77-theme',t)}catch(e){}}}
-  var th0='dark';try{th0=localStorage.getItem('padel77-theme')||'dark'}catch(e){}
-  setTheme(th0==='light'?'light':'dark',false);
+  var th0='light';try{th0=localStorage.getItem('padel77-theme')||'light'}catch(e){}
+  setTheme(th0==='dark'?'dark':'light',false);
   document.addEventListener('click',function(e){var b=e.target.closest('[data-th]');if(b)setTheme(b.getAttribute('data-th'),true)});
   var fil='all',sound=true,tab='new',uid=100,actx=null,booted=false,gOff=0,DN=['вс','пн','вт','ср','чт','пт','сб'];
   function rnd(n){return Math.floor(Math.random()*n)}
