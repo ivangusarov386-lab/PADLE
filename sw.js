@@ -1,6 +1,6 @@
 /* Cache the public presentation only; bookings and other requests are never cached. */
-const CACHE='padel77-pwa-v3';
-const FILES=['./','index.html','manifest.webmanifest','assets/match-point.css?v=20261104-pwa1','assets/booking.js?v=20261102-2','assets/match-point.js?v=20261102-5','assets/pwa.js?v=20261104-1','assets/court-poster.jpg','assets/coach-vitaliy-cutout.png','assets/coach-tamara-cutout.png','assets/icons/icon-180.png','assets/icons/icon-192.png','assets/icons/icon-512.png','assets/fonts/manrope-cyrillic-400-normal.woff2','assets/fonts/manrope-cyrillic-700-normal.woff2','assets/fonts/manrope-latin-400-normal.woff2','assets/fonts/manrope-latin-700-normal.woff2'];
+const CACHE='padel77-pwa-v4';
+const FILES=['./','index.html','manifest.webmanifest','assets/match-point.css?v=20261105-demo1','assets/booking.js?v=20261102-2','assets/match-point.js?v=20261102-5','assets/pwa.js?v=20261104-1','assets/court-poster.jpg','assets/coach-vitaliy-cutout.png','assets/coach-tamara-cutout.png','assets/icons/icon-180.png','assets/icons/icon-192.png','assets/icons/icon-512.png','assets/fonts/manrope-cyrillic-400-normal.woff2','assets/fonts/manrope-cyrillic-700-normal.woff2','assets/fonts/manrope-latin-400-normal.woff2','assets/fonts/manrope-latin-700-normal.woff2'];
 const scoped=path=>new URL(path,self.registration.scope).href;
 const assets=new Set(FILES.map(scoped));
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(FILES)).then(()=>self.skipWaiting()));});
